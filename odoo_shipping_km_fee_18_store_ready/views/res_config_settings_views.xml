@@ -1,0 +1,24 @@
+<odoo>
+  <record id="view_res_config_settings_shipping_km_fee" model="ir.ui.view">
+    <field name="name">res.config.settings.shipping.km.fee</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//form" position="inside">
+        <app string="Shipping Fee Configuration">
+          <block title="Shipping Fee Settings">
+            <setting string="Price per Kilometer" help="Set the shipping price per kilometer.">
+              <field name="shipping_price_per_km"/>
+            </setting>
+            <setting string="Price per Hour" help="Set the shipping price per hour of travel.">
+              <field name="shipping_price_per_hour"/>
+            </setting>
+            <setting string="Google Maps API Key" help="Enter your Google Maps API key for distance calculations.">
+              <field name="google_maps_api_key"/>
+            </setting>
+          </block>
+        </app>
+      </xpath>
+    </field>
+  </record>
+</odoo>
